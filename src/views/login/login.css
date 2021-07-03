@@ -1,0 +1,66 @@
+.login-content {
+  width: 100%;
+  height: 100vh;
+  padding: 15%;
+  margin: auto;
+  background-color: #614ea6;
+  overflow: hidden;
+}
+.login-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  color: #614ea6;
+  background-color: #fff;
+  border-color: #f21667;
+  box-shadow: 0 0 0 0.2rem #f2166733;
+}
+
+.btn-login {
+  background-color: #fff;
+  color: #614ea6;
+  margin-top: 2rem;
+}
+.btn-login:hover {
+  background-color: #f21667;
+  color: #fff;
+}
+.opcoes-login :any-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 16px;
+  transition: 0.2s ease-in;
+}
+.opcoes-login :any-link:hover {
+  color: #f21667;
+}
+.Copyrights {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+}
+.Copyrights p {
+  color: #fafafa;
+  transition: 0.2s ease-in;
+}
+.Copyrights p:hover {
+  color: #f21667;
+  cursor: none;
+}
+
+@media (max-width: 700px) {
+  .opcoes-login :any-link {
+    display: block;
+    text-align: center;
+  }
+  .opcoes-login span {
+    display: none;
+  }
+
+  .Copyrights {
+    font-size: 10px;
+  }
+}
