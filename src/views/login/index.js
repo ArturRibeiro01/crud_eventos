@@ -59,12 +59,19 @@ const Login = () => {
 
         <div className="msg-login text-white text-center my-5">
           {msgTipo === "sucesso" && (
-            <span>WOW! Você está conectado &#128526;</span>
+            <>
+              <span className="sussess-message">WOW! Você está conectado</span>
+              <span>&#128526;</span>
+            </>
           )}
           {msgTipo === "Deu Ruim" && (
-            <span>
-              Acesso Negado! Verifique seu usuário e sua senha &#128549;
-            </span>
+            <>
+              <span>🔒 </span>
+              <span className="error-message">
+                Acesso Negado! Verifique seu usuário e senha
+              </span>
+              <span> &#128549;</span>
+            </>
           )}
         </div>
 
