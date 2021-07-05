@@ -26,7 +26,21 @@ const NovoUsuario = () => {
         setMsgTipo("sucesso");
       })
       .catch((erro) => {
-        alert(erro);
+        setMsgTipo("erro");
+        switch (erro.message) {
+          case "Password should be at least 6 characters":
+            setMsg("Sua senha precisa de ao menos 6 digitos");
+            break;
+          case "The email address is already in use by another account.":
+            setMsg("Esse e-mail já está sendo usado.");
+            break;
+          case "The email address is badly formatted.":
+            setMsg("Seu email não foi digitado em um padrão correto");
+            break;
+          default:
+            setMsg("Não foi possivel cadastrar, tente novamente");
+            break;
+        }
       });
   }
 
