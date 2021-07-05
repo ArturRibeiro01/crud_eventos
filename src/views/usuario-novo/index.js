@@ -18,6 +18,16 @@ const NovoUsuario = () => {
       setMsg("Informe e-mail e senha para efetuar o cadastro");
       return;
     }
+
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, senha)
+      .then((resultado) => {
+        setMsgTipo("sucesso");
+      })
+      .catch((erro) => {
+        alert(erro);
+      });
   }
 
   return (
@@ -44,7 +54,7 @@ const NovoUsuario = () => {
           Cadastrar
         </button>
 
-        <div className="msg-login text-white text-center my-5">
+        <div className="msg-login text-black text-center my-5">
           {msgTipo === "sucesso" && (
             <>
               <span className="sussess-message">
@@ -53,7 +63,7 @@ const NovoUsuario = () => {
               <span>&#128526;</span>
             </>
           )}
-          {msgTipo === "Deu Ruim" && (
+          {msgTipo === "erro" && (
             <>
               <span>🔒 </span>
               <span className="error-message">{msg}</span>
