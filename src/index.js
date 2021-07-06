@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import Login from "../src/views/login/index";
-import NovoUsuario from "../src/views/usuario-novo/index";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <NovoUsuario />
-    {/* <Login /> */}
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -4,6 +4,8 @@ import "./login.css";
 import firebase from "../../config/firebase";
 import "firebase/auth";
 
+import { Link } from "react-router-dom";
+
 const Login = () => {
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
@@ -76,9 +78,7 @@ const Login = () => {
         </div>
 
         <div className="opcoes-login mt-5 text-center">
-          <a href="www.globo.com.br" target="_blank">
-            Quero me cadastrar
-          </a>
+          <Link to="novousuario">Quero me cadastrar</Link>
           <span>&#9749;</span>
           <a href="www.netflix.com.br" target="_blank">
             Esquecí minha senha
