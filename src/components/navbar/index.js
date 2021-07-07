@@ -1,7 +1,8 @@
+// import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 const Navbar = (props) => {
   return (
@@ -14,17 +15,27 @@ const Navbar = (props) => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <i class="fas fa-bars text-white"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/novousuario">
+                Crie uma conta
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/login">
+                Login
+              </Link>
             </li>
           </ul>
         </div>
@@ -33,6 +44,6 @@ const Navbar = (props) => {
   );
 };
 
-Navbar.propTypes = {};
+// Navbar.propTypes = {};
 
 export default Navbar;
